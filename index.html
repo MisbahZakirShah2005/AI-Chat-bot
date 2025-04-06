@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AI Chatbot</title>
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&display=swap"/>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <!-- Toggle Button -->
+<button id="chatbot-toggler">
+    <span class="icon open material-symbols-rounded">mode_comment</span>
+    <span class="icon close material-icons">close</span>
+  </button>
+  
+
+    <!-- Chatbot Popup -->
+    <div class="chatbot-popup">
+        <div class="chat-header">
+            <div class="header-info">
+                <svg class="chatbot-logo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+                    <path d="M738.3 287.6H285.7...z"></path>
+                </svg>
+                <h2 class="logo-text">CHATBOT</h2>
+            </div>
+            <button id="close-chatbot" class="material-icons">close</button>
+        </div>
+
+        <!-- Chat Body -->
+        <div class="chat-body">
+            <div class="message bot-message">
+                <svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+                    <path d="M738.3 287.6H285.7...z"></path>
+                </svg>
+                <div class="message-text">Hey there 👋<br />How can I help you today?</div>
+            </div>
+        </div>
+
+        <!-- Chat Footer -->
+        <div class="chat-footer">
+            <form action="#" class="chat-form">
+                <textarea placeholder="Message..." class="message-input" required></textarea>
+                <div class="chat-controls">
+                    <button type="button" id="emoji-picker" class="material-symbols-outlined">
+                        <span class="material-icons">sentiment_satisfied</span>
+                    </button>
+
+                    <div class="file-upload-wrapper">
+                        <input type="file" accept="image/*" id="file-input" hidden />
+                        <img src="#" alt="Uploaded File Preview" />
+                        <button type="button" id="file-upload" class="material-symbols-outlined">
+                            <span class="material-icons">attach_file</span>
+                        </button>
+                        <button type="button" id="file-cancel" class="material-symbols-outlined">
+                            <span class="material-icons">close</span>
+                        </button>
+                    </div>
+
+                    <button type="submit" id="send-message" class="material-symbols-outlined">
+                        <span class="material-icons">arrow_upward</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Emoji Picker -->
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
